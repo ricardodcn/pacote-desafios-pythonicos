@@ -13,7 +13,15 @@ antes de combina-las.
 
 def front_x(words):
     # +++ SUA SOLUÇÃO +++
-    return
+    # words.sort()
+    # lista_x = [item for item in words if item[0] == 'x']
+    # lista_sem_x = [item for item in words if item[0] != 'x']
+    # lista_x.extend(lista_sem_x)
+    # return lista_x
+
+
+    return sorted(words, key=lambda x : x if x[0] == 'x' else f'y{x}' )
+    
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
@@ -43,3 +51,5 @@ if __name__ == '__main__':
          ['xaa', 'xcc', 'aaa', 'bbb', 'ccc'])
     test(front_x, ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'],
          ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'])
+    test(front_x, ['mix', 'ayz', 'apple', 'aanadu', 'aardvark'],
+         ['aanadu', 'aardvark', 'apple', 'ayz','mix'])
