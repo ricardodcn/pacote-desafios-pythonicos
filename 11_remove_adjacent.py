@@ -9,18 +9,13 @@ Irá retornar: [1, 2, 3]
 """
 
 def remove_adjacent(nums):
-    # +++ SUA SOLUÇÃO +++
-    new_list = nums[:1]
+    l_nova = nums[:1]
+
     for i, j in zip(nums, nums[1:]):
         if i != j:
-            new_list.append(j)
-    return new_list
-    
+            l_nova.append(j)
+    return l_nova
 
-    
-    return repetidos
-
-    return repetidos
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
