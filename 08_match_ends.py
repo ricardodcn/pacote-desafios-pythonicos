@@ -9,13 +9,13 @@ PS: Python não possui o operador ++, porém += funciona.
 """
 
 def match_ends(words):
-    size=0
-    for word in words:
-        size += 1 if len(word) > 1 and word[0] == word[-1] else 0
-
-    return size 
-
-        
+    # size = 0
+    # for item in words:
+    #     size += 1 if len(item)> 1 and item[0] == item[-1] else 0
+    # return size
+      
+    size = [1 for item in words if len(item)> 1 and item[0] == item[-1] ]
+    return len(size)    
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
