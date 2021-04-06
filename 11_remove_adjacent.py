@@ -8,13 +8,16 @@ Exemplo: [1, 2, 2, 3]
 Irá retornar: [1, 2, 3]
 """
 
-def remove_adjacent(nums):
+def remove_adjacent(nums):   
+    #l_nova = nums[:1]
+    #for i, j in zip(nums, nums[1:]):
+    #    if i != j:
+    #        l_nova.append(j)
     l_nova = nums[:1]
-
-    for i, j in zip(nums, nums[1:]):
-        if i != j:
-            l_nova.append(j)
+    l_nova[1:] = [j for i,j in zip(nums, nums[1:]) if i != j ]
     return l_nova
+
+
 
 
 
