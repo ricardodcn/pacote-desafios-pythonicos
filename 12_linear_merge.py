@@ -8,10 +8,26 @@ modificar as listas recebidas.
 A sua solução deve rodar em tempo linear, ou seja, deve fazer uma
 única passagem em cada uma das listas.
 """
+from collections import deque
 
 def linear_merge(list1, list2):
     # +++ SUA SOLUÇÃO +++
-    return
+    l_nova = []
+
+    while len(list1 + list2) > 0:
+        if  (list1[-1:] > list2[-1:]):
+            l_nova.append(list1.pop(-1))
+        else:
+            l_nova.append(list2.pop(-1))
+    
+    return l_nova[::-1]
+
+
+
+        
+
+
+
 
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
